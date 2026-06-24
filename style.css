@@ -34,7 +34,7 @@ body{
   width:48px;height:48px;border-radius:16px;
   display:grid;place-items:center;
   color:#fff;font-weight:800;
-  background:linear-gradient(145deg,var(--blue),var(--blue-dark));
+  background:linear-gradient(145deg,#F58220,#E86A00);
   box-shadow:0 10px 28px rgba(15,94,168,.25);
 }
 .brand-mark.small{width:36px;height:36px;border-radius:12px;font-size:.85rem}
