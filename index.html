@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco Contactar | Programación de Desembolso</title>
+  <meta name="description" content="PoC Banco Contactar - Programación digital de llamada de validación de desembolso." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-mark">BC</div>
+          <div>
+            <strong>Banco Contactar</strong>
+            <span>Desembolso digital</span>
+          </div>
+        </div>
+        <span class="badge">PoC Amazon Connect</span>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Crédito aprobado preliminarmente</p>
+          <h1>Programe su llamada de validación de identidad</h1>
+          <p class="lead">
+            Para continuar con el proceso de desembolso, seleccione el horario en el que desea recibir la llamada de validación de Banco Contactar.
+          </p>
+
+          <div class="status-card">
+            <div class="check">✓</div>
+            <div>
+              <h2>Solicitud lista para validación</h2>
+              <p>La llamada tiene una duración aproximada de 3 minutos.</p>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="primary-btn" onclick="openChatHelper()">Programar llamada</button>
+            <a href="#proceso" class="secondary-link">Ver pasos del proceso</a>
+          </div>
+
+          <p class="small-note">Canal seguro de demostración para la prueba de concepto de Banco Contactar.</p>
+        </div>
+
+        <div class="phone-card" aria-label="Vista previa del proceso">
+          <div class="phone-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="screen">
+            <div class="mini-brand">
+              <div class="brand-mark small">BC</div>
+              <strong>Banco Contactar</strong>
+            </div>
+            <div class="approved">✓ Crédito aprobado</div>
+            <h3>Validación de desembolso</h3>
+            <p>Seleccione un horario para que un asesor se comunique con usted.</p>
+            <div class="slots">
+              <span>Hoy 2:00 PM</span>
+              <span>Hoy 4:00 PM</span>
+              <span>Mañana 9:00 AM</span>
+              <span>Mañana 11:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="process">
+      <h2>Proceso de validación</h2>
+      <div class="steps">
+        <article>
+          <span>1</span>
+          <h3>Confirmación</h3>
+          <p>El cliente recibe el enlace de programación digital.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Selección</h3>
+          <p>Elige fecha y hora para la llamada de validación.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Registro</h3>
+          <p>La información queda lista para alimentar futuras campañas outbound.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="future">
+      <div>
+        <p class="eyebrow">Evolución propuesta</p>
+        <h2>Integración con CRM, DynamoDB o campañas de marcación</h2>
+        <p>
+          En una fase posterior, los datos capturados podrán almacenarse automáticamente para activar llamadas de validación, seguimiento de desembolsos y reportería operativa.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Banco Contactar</strong>
+    <span>Prueba de concepto desarrollada con Amazon Connect</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  (function(w, d, x, id){
+    s=d.createElement('script');
+    s.src='https://bancocontactar.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+    s.async=1;
+    s.id=id;
+    d.getElementsByTagName('head')[0].appendChild(s);
+    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+  })(window, document, 'amazon_connect', '834d90c4-694c-4ba1-a8a3-ff43dd9b8b03');
+  amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#0F5EA8' }, closeChat: { color: '#ffffff', backgroundColor: '#0F5EA8'} });
+  amazon_connect('snippetId', 'QVFJREFIaDRobWZ4TDRrQys5SXJsU0RsT2NjaHpDOEQvN3ZqSEZkQWdhY1I3SUhoUXdGYVVCNlZENy9XOEdrWHNjU2U4R2x2QUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNa04ycVdqbmdVUDZYTWdlWkFnRVFnQ3NBYWY2KzFDbkh4Ung3d2pLNSs5M2R5NHZkcTY0Uk5wK0tZcVdNaWRXTHJ0MGI1UWlySUxhYzE1MGU6Om1DSnBSZVQySDlSR2hUMTlNMkk3MVEvUTR0NUFnRnRMN1dPNWprSHJicVdGQ2s0eUJuSFEvVFp5VW4vazIrcUdBY0FGQ0JWYVM4T0dMc1pleVJSM0E2dHBwakZsaGZ0TThiR1ptaGpDc0wwRlVzWndBUHdFOTdvaHljbnd1a3dPei95bGRmaUpoTkhnNjIwd0MwVXY2NzY5dkROUyswUT0=');
+  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+</script>
+</body>
+</html>
